@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the code on the runner
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6.0.1
       - name: Setup Go version on the runner
         uses: actions/setup-go@v2
         with:
