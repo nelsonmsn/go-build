@@ -1,0 +1,18 @@
+name: Run a simple go file in the runner system
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code on the runner
+        uses: actions/checkout@v3
+      - name: Setup Go version on the runner
+        uses: actions/setup-go@v2
+        with:
+          go-version: '1.25.6'
+      - run: go run hello_world.go
